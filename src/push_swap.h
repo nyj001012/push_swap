@@ -6,7 +6,7 @@
 /*   By: yena <yena@studnet.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 11:41:33 by yena              #+#    #+#             */
-/*   Updated: 2023/02/13 16:28:37 by yena             ###   ########.fr       */
+/*   Updated: 2023/02/14 10:28:29 by yena             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,9 @@ enum e_commands
 };
 
 /*------------------- ERROR_UTIL_C --------------------*/
+void	free_pointers(char **ptrs);
+
+/*------------------- ERROR_UTIL_C --------------------*/
 void	throw_error(void);
 
 /*---------------- INPUT_VALIDATION_C -----------------*/
@@ -66,8 +69,8 @@ t_node	*get_max_node(t_stack *stack);
 t_node	*get_min_node(t_stack *stack);
 int 	get_nodes_count(t_stack *stack);
 t_node	*get_tail_node(t_node *node);
-t_node	*map_to_node(t_node *node, int (*f)(int), void (*del)(int));
-void	node_iter(t_node *node, void (*f)(int));
+t_node	*map_to_node(t_node *node, int (*f)(int *), void (*del)(int *));
+void	node_iter(t_node *node, void (*f)(int *));
 
 /*--------------------- STACK_UTIL --------------------*/
 void	clear_stack(t_node **current, void (*del)(int *));
