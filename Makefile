@@ -34,7 +34,11 @@ UTILS_NAME = util/pointer_util.c\
 UTILS = ${addprefix $(SRC_DIR)/, $(UTILS_NAME)}
 UTILS_OBJS = ${UTILS:.c=.o}
 
-TEST_SRCS = test/unit/push_a_or_b.c
+TEST_DIR  = test
+TEST_RAWS = unit/unit_test.c\
+			unit/push_a_or_b.c\
+			unit/reverse_rotate_a_or_b.c
+TEST_SRCS = ${addprefix $(TEST_DIR)/, $(TEST_RAWS)}
 TEST_OBJS = ${TEST_SRCS:.c=.o}
 TESTER    = push_swap.test
 
@@ -48,7 +52,7 @@ GNL_DIR = get_next_line
 GNL = get_next_line.c
 GNL_OBJS = ${GNL:.c=.o}
 
-INC = -I $(SRC_DIR) -I $(GNL_DIR) -I $(LIBFT_DIR) -I $(FT_PRINTF_DIR)
+INC = -I $(SRC_DIR) -I $(GNL_DIR) -I $(LIBFT_DIR) -I $(FT_PRINTF_DIR) -I $(TEST_DIR)
 
 CC = cc
 CFLAGS = -Wall -Werror -Wextra -g
@@ -83,6 +87,7 @@ $(TESTER): $(TEST_OBJS) $(UTILS_OBJS) $(GNL_DIR)/$(GNL_OBJS)
 					$(GNL_DIR)/$(GNL_OBJS)\
   					$(TEST_OBJS)\
 					$(INC)\
+					$(TEST_INC)\
 					-o $(TESTER)
 
 clean:
