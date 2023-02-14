@@ -37,7 +37,11 @@ UTILS_OBJS = ${UTILS:.c=.o}
 TEST_DIR  = test
 TEST_RAWS = unit/unit_test.c\
 			unit/push_a_or_b.c\
-			unit/reverse_rotate_a_or_b.c
+			unit/reverse_rotate_a_or_b.c\
+			unit/reverse_rotate_a_and_b.c\
+			unit/rotate_a_or_b.c\
+			unit/rotate_a_and_b.c\
+			unit/swap_a_or_b.c
 TEST_SRCS = ${addprefix $(TEST_DIR)/, $(TEST_RAWS)}
 TEST_OBJS = ${TEST_SRCS:.c=.o}
 TESTER    = push_swap.test

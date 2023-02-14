@@ -1,25 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test.h                                             :+:      :+:    :+:   */
+/*   swap_a_and_b.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yena <yena@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/14 11:20:27 by yena              #+#    #+#             */
-/*   Updated: 2023/02/14 13:55:33 by yena             ###   ########.fr       */
+/*   Created: 2023/02/13 14:26:48 by yena              #+#    #+#             */
+/*   Updated: 2023/02/13 16:19:11 by yena             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_TEST_H
-#define PUSH_SWAP_TEST_H
+#include "push_swap.h"
 
-# include "push_swap.h"
-
-void	push_a_or_b_test(void);
-void	reverse_rotate_a_or_b_test(void);
-void	reverse_rotate_a_and_b_test(void);
-void	rotate_a_or_b_test(void);
-void	rotate_a_and_b_test(void);
-void	swap_a_or_b_test(void);
-
-#endif //PUSH_SWAP_TEST_H
+void	swap_a_and_b(t_stack *stack_a, t_stack *stack_b)
+{
+	swap_a_or_b(stack_a, SS);
+	swap_a_or_b(stack_b, SS);
+	ft_printf("ss");
+}
