@@ -34,8 +34,8 @@ UTILS_NAME = util/pointer_util.c\
 UTILS = ${addprefix $(SRC_DIR)/, $(UTILS_NAME)}
 UTILS_OBJS = ${UTILS:.c=.o}
 
-TEST_NAME = test/unit/push_a_or_b.c
-TEST_OBJS = ${TEST_NAME:.c=.o}
+TEST_SRCS = test/unit/push_a_or_b.c
+TEST_OBJS = ${TEST_SRCS:.c=.o}
 TESTER    = push_swap.test
 
 LIBFT_DIR = libft
