@@ -6,13 +6,13 @@
 /*   By: yena <yena@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/18 23:19:10 by yena              #+#    #+#             */
-/*   Updated: 2023/02/12 17:18:15 by yena             ###   ########.fr       */
+/*   Updated: 2023/02/14 10:29:38 by yena             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-t_node	*map_to_node(t_node *node, int (*f)(int), void (*del)(int))
+t_node	*map_to_node(t_node *node, int (*f)(int *), void (*del)(int *))
 {
 	t_node	*new_node;
 	t_node	*head;
@@ -22,7 +22,7 @@ t_node	*map_to_node(t_node *node, int (*f)(int), void (*del)(int))
 	head = 0;
 	while (node)
 	{
-		new_node = create_new_node(f(node->value));
+		new_node = create_new_node(f(&node->value));
 		if (!new_node)
 		{
 			clear_stack(&head, del);
