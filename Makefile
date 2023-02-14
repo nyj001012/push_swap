@@ -5,7 +5,8 @@ SRC_RAW = push_swap.c
 SRCS = ${addprefix $(SRC_DIR)/, $(SRC_RAW)}
 OBJS = ${SRCS:.c=.o}
 
-UTILS_NAME = util/error_util.c\
+UTILS_NAME = util/pointer_util.c\
+			 util/error_util.c\
 			 util/print_util.c\
 			 util/validation/input_validation.c\
 			 util/validation/integer_validation.c\
@@ -32,6 +33,10 @@ UTILS_NAME = util/error_util.c\
 			 util/command/swap_a_or_b.c
 UTILS = ${addprefix $(SRC_DIR)/, $(UTILS_NAME)}
 UTILS_OBJS = ${UTILS:.c=.o}
+
+TEST_NAME = test/unit/push_a_or_b.c
+TEST_OBJS = ${TEST_NAME:.c=.o}
+TESTER    = push_swap.test
 
 LIBFT_DIR = libft
 LIBFT = libft.a
@@ -66,13 +71,27 @@ $(NAME): $(OBJS) $(UTILS_OBJS) $(GNL_DIR)/$(GNL_OBJS)
 %.o:%.c
 	${CC} ${CFLAGS} $(INC) -c $< -o $@
 
+test: $(TESTER)
+
+$(TESTER): $(TEST_OBJS) $(UTILS_OBJS) $(GNL_DIR)/$(GNL_OBJS)
+	make -C $(LIBFT_DIR)
+	make -C $(FT_PRINTF_DIR)
+
+	$(CC) $(CFLAGS) $(UTILS_OBJS)\
+					$(LIBFT_DIR)/$(LIBFT)\
+					$(FT_PRINTF_DIR)/$(FT_PRINTF)\
+					$(GNL_DIR)/$(GNL_OBJS)\
+  					$(TEST_OBJS)\
+					$(INC)\
+					-o $(TESTER)
+
 clean:
 	make -C $(LIBFT_DIR) clean
 	make -C $(FT_PRINTF_DIR) clean
-	$(RMF) $(OBJS) $(UTILS_OBJS) $(GNL_DIR)/$(GNL_OBJS)
+	$(RMF) $(OBJS) $(UTILS_OBJS) $(GNL_DIR)/$(GNL_OBJS) $(TEST_OBJS)
 
 fclean: clean
-	$(RMF) $(NAME)
+	$(RMF) $(NAME) $(LIBFT_DIR)/$(LIBFT) $(FT_PRINTF_DIR)/$(FT_PRINTF) $(TESTER)
 
 re: fclean all
 
