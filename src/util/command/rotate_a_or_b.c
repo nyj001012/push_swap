@@ -6,7 +6,7 @@
 /*   By: yena <yena@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/13 14:32:07 by yena              #+#    #+#             */
-/*   Updated: 2023/02/13 16:04:19 by yena             ###   ########.fr       */
+/*   Updated: 2023/02/14 10:34:19 by yena             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	rotate_a_or_b(t_stack *stack, int command)
 	stack->head_node = stack->head_node->next;
 	temp->next = NULL;
 	if (command == RA)
-		ft_printf("ra");
+		ft_printf("ra\n");
 	else if (command == RB)
-		ft_printf("rb");
+		ft_printf("rb\n");
 }

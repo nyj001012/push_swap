@@ -6,7 +6,7 @@
 /*   By: yena <yena@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/13 14:42:10 by yena              #+#    #+#             */
-/*   Updated: 2023/02/13 16:15:54 by yena             ###   ########.fr       */
+/*   Updated: 2023/02/14 10:34:04 by yena             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void	reverse_rotate_a_or_b(t_stack *stack, int command)
 		current = current->next;
 	current->next = NULL;
 	if (command == RRA)
-		ft_printf("rra");
+		ft_printf("rra\n");
 	else if (command == RRB)
-		ft_printf("rrb");
+		ft_printf("rrb\n");
 }
