@@ -6,7 +6,7 @@
 /*   By: yena <yena@studnet.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 11:41:33 by yena              #+#    #+#             */
-/*   Updated: 2023/02/14 10:28:29 by yena             ###   ########.fr       */
+/*   Updated: 2023/02/14 15:18:01 by yena             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,10 @@ void	free_pointers(char **ptrs);
 /*------------------- ERROR_UTIL_C --------------------*/
 void	throw_error(void);
 
+/*------------------- INPUT_UTIL_C --------------------*/
+size_t	get_input_size(char **argv);
+char	**make_input_lists(char **argv);
+
 /*---------------- INPUT_VALIDATION_C -----------------*/
 bool	is_valid_input(char **input);
 bool	is_underflow(char *string);
@@ -89,5 +93,13 @@ void	rotate_a_or_b(t_stack *stack, int command); // Shift up all elements of sta
 void	rotate_a_and_b(t_stack *stack_a, t_stack *stack_b); // ra and rb at the same time.
 void	reverse_rotate_a_or_b(t_stack *stack, int command); // Shift down all elements of stack a/b by 1.
 void	reverse_rotate_a_and_b(t_stack *stack_a, t_stack *stack_b); // rra and rrb at the same time.
+
+/*--------------------- SWAP_UTIL ---------------------*/
+void	push_swap(t_stack *a, t_stack *b);
+
+/*--------------------- SORT_UTIL ---------------------*/
+void	sort_two(t_stack *a);
+void	sort_three(t_stack *a);
+void	sort_multiple(t_stack *a, t_stack *b);
 
 #endif //PUSH_SWAP_PUSH_SWAP_H
