@@ -8,6 +8,7 @@ OBJS = ${SRCS:.c=.o}
 UTILS_NAME = util/pointer_util.c\
 			 util/error_util.c\
 			 util/print_util.c\
+			 util/input_util.c\
 			 util/validation/input_validation.c\
 			 util/validation/integer_validation.c\
 			 util/stack/clear_stack.c\
