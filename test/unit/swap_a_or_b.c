@@ -6,7 +6,7 @@
 /*   By: yena <yena@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/13 14:13:27 by yena              #+#    #+#             */
-/*   Updated: 2023/02/14 14:06:07 by yena             ###   ########.fr       */
+/*   Updated: 2023/02/14 14:10:02 by yena             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ void	swap_a_or_b_test(void)
 
 
 	ft_printf("\n\n============ command: sb ============\n");
-	push_a_or_b(&a, &b, PA);
+	push_a_or_b(&a, &b, PB);
 	ft_printf("stack a: 1 2 3 -1 0 \tstack b: 4 \n");
 	ft_printf("from swap_a_or_b(): must do nothing\n");
 	swap_a_or_b(&b, SB);
@@ -88,7 +88,7 @@ void	swap_a_or_b_test(void)
 
 
 	ft_printf("\n\n============ command: sb ============\n");
-	push_a_or_b(&a, &b, PA);
+	push_a_or_b(&a, &b, PB);
 	ft_printf("stack a: 2 3 -1 0 \tstack b: 1 4 \n");
 	ft_printf("from swap_a_or_b(): ");
 	swap_a_or_b(&b, SB);
