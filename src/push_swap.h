@@ -6,7 +6,7 @@
 /*   By: yena <yena@studnet.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 11:41:33 by yena              #+#    #+#             */
-/*   Updated: 2023/02/14 15:22:44 by yena             ###   ########.fr       */
+/*   Updated: 2023/02/14 15:25:25 by yena             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ typedef struct s_stack
 	struct s_node	*head_node;
 	struct s_node	*max_node;
 	struct s_node	*min_node;
-	int				count_for_sorting;
+	int				nodes_count;
 }	t_stack;
 
 enum e_commands

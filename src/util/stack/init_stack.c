@@ -6,7 +6,7 @@
 /*   By: yena <yena@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/12 15:38:05 by yena              #+#    #+#             */
-/*   Updated: 2023/02/13 16:28:10 by yena             ###   ########.fr       */
+/*   Updated: 2023/02/14 15:25:56 by yena             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,9 @@ void	init_stack(t_stack *stack_a, t_stack *stack_b, char **input)
 	}
 	stack_a->max_node = get_max_node(stack_a);
 	stack_a->min_node = get_min_node(stack_a);
+	stack_a->nodes_count = get_nodes_count(stack_a);
 	stack_b->head_node = NULL;
-	stack_b->count_for_sorting = 0;
+	stack_b->nodes_count = 0;
 	stack_b->max_node = NULL;
 	stack_b->min_node = NULL;
 }
