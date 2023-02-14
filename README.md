@@ -23,9 +23,10 @@ This is a project from 42 school. The goal is to sort a stack of numbers using t
 - push_swap
 
 ### Makefile
-- `make`: compile the project
+- `make`: compile the project in `srcs/` and `libft/` and `ft_printf/`, `get_next_line/`
 - `make clean`: remove all .o files
 - `make fclean`: remove all .o files and the executable
+- `make test`: compile the project and run the test in `test/` folder
 
 ## Commands
 - sa / sb: Swap the first 2 elements at the top of stack a / b. Do nothing if there is only one or no elements.
