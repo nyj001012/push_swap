@@ -6,7 +6,7 @@
 /*   By: yena <yena@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/12 15:38:05 by yena              #+#    #+#             */
-/*   Updated: 2023/02/14 15:25:56 by yena             ###   ########.fr       */
+/*   Updated: 2023/02/14 15:26:46 by yena             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@ void	init_stack(t_stack *stack_a, t_stack *stack_b, char **input)
 	t_node	*node;
 
 	stack_a->head_node = NULL;
-	stack_a->count_for_sorting = 0;
 	while (*input)
 	{
 		value = ft_atoi(*input);
