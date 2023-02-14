@@ -6,13 +6,13 @@
 /*   By: yena <yena@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/13 14:27:41 by yena              #+#    #+#             */
-/*   Updated: 2023/02/14 10:51:35 by yena             ###   ########.fr       */
+/*   Updated: 2023/02/14 11:21:43 by yena             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	main(void)
+void	push_a_or_b_test(void)
 {
 	t_stack	a;
 	t_stack	b;
