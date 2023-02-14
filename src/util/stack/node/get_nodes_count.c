@@ -6,23 +6,25 @@
 /*   By: yena <yena@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/18 23:00:48 by yena              #+#    #+#             */
-/*   Updated: 2023/02/12 17:04:36 by yena             ###   ########.fr       */
+/*   Updated: 2023/02/14 11:54:51 by yena             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "push_swap.h"
 
-int	get_nodes_count(t_list *lst)
+int	get_nodes_count(t_stack *stack)
 {
-	int	size;
+	t_node	*current;
+	int		size;
 
-	if (!lst)
+	current = stack->head_node;
+	if (!current)
 		return (0);
 	size = 0;
-	while (lst)
+	while (current != NULL)
 	{
 		size++;
-		lst = lst->next;
+		current = current->next;
 	}
 	return (size);
 }
