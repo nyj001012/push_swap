@@ -6,7 +6,7 @@
 /*   By: yena <yena@studnet.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 11:41:33 by yena              #+#    #+#             */
-/*   Updated: 2023/02/14 15:18:01 by yena             ###   ########.fr       */
+/*   Updated: 2023/02/14 15:22:44 by yena             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,7 +99,7 @@ void	push_swap(t_stack *a, t_stack *b);
 
 /*--------------------- SORT_UTIL ---------------------*/
 void	sort_two(t_stack *a);
-void	sort_three(t_stack *a);
+void	sort_three(t_stack *a, t_stack *b);
 void	sort_multiple(t_stack *a, t_stack *b);
 
 #endif //PUSH_SWAP_PUSH_SWAP_H
