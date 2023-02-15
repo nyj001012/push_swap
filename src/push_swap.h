@@ -6,7 +6,7 @@
 /*   By: yena <yena@studnet.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 11:41:33 by yena              #+#    #+#             */
-/*   Updated: 2023/02/15 14:51:46 by yena             ###   ########.fr       */
+/*   Updated: 2023/02/15 14:56:13 by yena             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,7 @@ t_node	*create_new_node(int value);
 void	delete_one_node(t_node *node, void (*del)(int *));
 t_node	*get_max_node(t_stack *stack);
 t_node	*get_min_node(t_stack *stack);
-t_node	*get_median_node(t_sack *stack);
+t_node	*get_median_node(t_stack *stack);
 int 	get_nodes_count(t_stack *stack);
 t_node	*get_tail_node(t_node *node);
 t_node	*map_to_node(t_node *node, int (*f)(int *), void (*del)(int *));
@@ -81,6 +81,7 @@ void	node_iter(t_node *node, void (*f)(int *));
 /*--------------------- STACK_UTIL --------------------*/
 void	clear_stack(t_node **current, void (*del)(int *));
 void	init_stack(t_stack *stack_a, t_stack *stack_b, char **input);
+void	set_ascending_order_of_nodes(t_stack *stack);
 bool	is_sorted(t_stack *stack);
 void	destroy_stacks(t_stack *a, t_stack *b);
 

@@ -25,6 +25,7 @@ UTILS_NAME = util/pointer_util.c\
 			 util/stack/node/node_iter.c\
 			 util/stack/node/get_max_node.c\
 			 util/stack/node/get_min_node.c\
+			 util/stack/node/get_median_node.c\
 			 util/command/push_a_or_b.c\
 			 util/command/reverse_rotate_a_and_b.c\
 			 util/command/reverse_rotate_a_or_b.c\
@@ -34,8 +35,8 @@ UTILS_NAME = util/pointer_util.c\
 			 util/command/swap_a_or_b.c\
 			 util/swap/swap_util.c\
 			 util/swap/sort/sort_two.c\
-			 util/swap/sort/sort_three.c\
-			 util/swap/sort/sort_multiple.c
+			 util/swap/sort/sort_three.c
+#			 util/swap/sort/sort_multiple.c
 UTILS = ${addprefix $(SRC_DIR)/, $(UTILS_NAME)}
 UTILS_OBJS = ${UTILS:.c=.o}
 
