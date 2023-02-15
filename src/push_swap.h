@@ -6,7 +6,7 @@
 /*   By: yena <yena@studnet.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 11:41:33 by yena              #+#    #+#             */
-/*   Updated: 2023/02/15 13:12:05 by yena             ###   ########.fr       */
+/*   Updated: 2023/02/15 14:51:46 by yena             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,9 @@
 
 typedef struct s_node
 {
-	int				value;
-	struct s_node	*next;
+	int					value;
+	unsigned long long	asc_order;
+	struct s_node		*next;
 }	t_node;
 
 typedef struct s_stack
@@ -71,6 +72,7 @@ t_node	*create_new_node(int value);
 void	delete_one_node(t_node *node, void (*del)(int *));
 t_node	*get_max_node(t_stack *stack);
 t_node	*get_min_node(t_stack *stack);
+t_node	*get_median_node(t_sack *stack);
 int 	get_nodes_count(t_stack *stack);
 t_node	*get_tail_node(t_node *node);
 t_node	*map_to_node(t_node *node, int (*f)(int *), void (*del)(int *));
