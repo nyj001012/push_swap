@@ -6,7 +6,7 @@
 /*   By: yena <yena@studnet.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 11:56:13 by yena              #+#    #+#             */
-/*   Updated: 2023/02/14 15:13:09 by yena             ###   ########.fr       */
+/*   Updated: 2023/02/14 17:11:23 by yena             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int	main(int argc, char	**argv)
 	input = make_input_lists(++argv);
 	if (!input || !is_valid_input(input))
 		throw_error();
-	init_stack(&a, &b, argv);
+	init_stack(&a, &b, input);
 	free_pointers(input);
 	if (is_sorted(&a))
 	{
