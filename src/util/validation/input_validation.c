@@ -6,7 +6,7 @@
 /*   By: yena <yena@studnet.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 13:51:33 by yena              #+#    #+#             */
-/*   Updated: 2023/02/12 15:35:07 by yena             ###   ########.fr       */
+/*   Updated: 2023/02/14 17:30:03 by yena             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ bool	has_overflow_or_underflow(char **input)
 	{
 		if (input[i][0] == '-' && is_underflow(input[i]))
 			return (true);
-		else if (is_overflow(input[i]))
+		else if (input[i][0] != '-' && is_overflow(input[i]))
 			return (true);
 	}
 	return (false);
