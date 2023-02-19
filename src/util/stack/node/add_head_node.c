@@ -6,7 +6,7 @@
 /*   By: yena <yena@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/18 22:58:02 by yena              #+#    #+#             */
-/*   Updated: 2023/02/12 17:42:27 by yena             ###   ########.fr       */
+/*   Updated: 2023/02/15 15:58:33 by yena             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	add_head_node(t_node **current, t_node *new)
 {
 	if (!new)
 		return ;
-	if (!current)
+	if (!current || !*current)
 	{
 		*current = new;
 		return ;
