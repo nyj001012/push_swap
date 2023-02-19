@@ -6,7 +6,7 @@
 /*   By: yena <yena@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/13 15:54:42 by yena              #+#    #+#             */
-/*   Updated: 2023/02/13 16:24:46 by yena             ###   ########.fr       */
+/*   Updated: 2023/02/19 15:21:58 by yena             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ void	destroy_stacks(t_stack *a, t_stack *b)
 {
 	if (a->head_node)
 		clear_stack(&a->head_node, clear_value);
-	if (b->head_node)
-		clear_stack(&b->head_node, clear_value);
+	b->head_node = NULL;
+	b->max_node = NULL;
+	b->min_node = NULL;
+	clear_value(&b->nodes_count);
 }
