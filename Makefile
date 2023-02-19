@@ -35,8 +35,8 @@ UTILS_NAME = util/pointer_util.c\
 			 util/command/swap_a_or_b.c\
 			 util/swap/swap_util.c\
 			 util/swap/sort/sort_two.c\
-			 util/swap/sort/sort_three.c
-#			 util/swap/sort/sort_multiple.c
+			 util/swap/sort/sort_three.c\
+			 util/swap/sort/sort_multiple.c
 UTILS = ${addprefix $(SRC_DIR)/, $(UTILS_NAME)}
 UTILS_OBJS = ${UTILS:.c=.o}
 
