@@ -6,7 +6,7 @@
 /*   By: yena <yena@studnet.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 11:41:33 by yena              #+#    #+#             */
-/*   Updated: 2023/02/15 14:56:13 by yena             ###   ########.fr       */
+/*   Updated: 2023/02/19 14:11:31 by yena             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@
 typedef struct s_node
 {
 	int					value;
-	unsigned long long	asc_order;
 	struct s_node		*next;
 }	t_node;
 
