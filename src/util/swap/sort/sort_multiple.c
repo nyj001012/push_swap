@@ -6,7 +6,7 @@
 /*   By: yena <yena@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/14 15:19:27 by yena              #+#    #+#             */
-/*   Updated: 2023/02/20 00:44:38 by yena             ###   ########.fr       */
+/*   Updated: 2023/02/20 01:11:45 by yena             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,16 +95,18 @@ void	sort_chunks_divided_three(t_stack *a, t_stack *b)
 
 int		get_index_of_node(t_stack *stack, t_node *compare)
 {
-	int	index;
+	t_node	*node;
+	int		index;
 
 	index = 0;
 	if (!compare)
 		return (-1);
+	node = stack->head_node;
 	while (index < stack->nodes_count)
 	{
-		if (stack->head_node->value == compare->value)
+		if (node->value == compare->value)
 			return (index);
-		stack->head_node = stack->head_node->next;
+		node = node->next;
 		index++;
 	}
 	return (-1);
@@ -215,7 +217,7 @@ void	rotate_each_stack(t_stack *a, t_stack *b, int *a_rotate, int *b_rotate)
 	}
 	else
 	{
-		while (*(a_rotate)++)
+		while (*(a_rotate)++ < 0)
 			reverse_rotate_a_or_b(a, RRA);
 	}
 	if (*b_rotate > 0)
@@ -225,7 +227,7 @@ void	rotate_each_stack(t_stack *a, t_stack *b, int *a_rotate, int *b_rotate)
 	}
 	else
 	{
-		while (*(b_rotate)++)
+		while (*(b_rotate)++ < 0)
 			reverse_rotate_a_or_b(b, RRB);
 	}
 }
