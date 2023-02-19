@@ -6,7 +6,7 @@
 /*   By: yena <yena@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/12 17:44:33 by yena              #+#    #+#             */
-/*   Updated: 2023/02/12 17:51:44 by yena             ###   ########.fr       */
+/*   Updated: 2023/02/19 23:04:33 by yena             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ bool	is_sorted(t_stack *stack)
 	current = stack->head_node;
 	while (current->next)
 	{
-		if (current->value < current->next->value)
+		if (current->value > current->next->value)
 			return (false);
 		current = current->next;
 	}

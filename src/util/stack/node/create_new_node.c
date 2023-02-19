@@ -6,7 +6,7 @@
 /*   By: yena <yena@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/18 22:51:39 by yena              #+#    #+#             */
-/*   Updated: 2023/02/19 15:11:48 by yena             ###   ########.fr       */
+/*   Updated: 2023/02/19 23:55:30 by yena             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ t_node	*create_new_node(int value)
 	if (!new_node)
 		return (0);
 	new_node->value = value;
+	new_node->asc_order = 0;
 	new_node->next = NULL;
 	return (new_node);
 }

@@ -6,7 +6,7 @@
 /*   By: yena <yena@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/13 14:32:07 by yena              #+#    #+#             */
-/*   Updated: 2023/02/14 10:34:19 by yena             ###   ########.fr       */
+/*   Updated: 2023/02/19 23:42:22 by yena             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	rotate_a_or_b(t_stack *stack, int command)
 	t_node	*temp;
 	t_node	*current;
 
-	if (!stack->head_node)
+	if (!stack->head_node || stack->nodes_count < 2)
 		return ;
 	temp = stack->head_node;
 	current = get_tail_node(stack->head_node);

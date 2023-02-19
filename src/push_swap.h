@@ -6,7 +6,7 @@
 /*   By: yena <yena@studnet.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 11:41:33 by yena              #+#    #+#             */
-/*   Updated: 2023/02/19 14:11:31 by yena             ###   ########.fr       */
+/*   Updated: 2023/02/19 23:49:24 by yena             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@
 typedef struct s_node
 {
 	int					value;
+	int					asc_order;
 	struct s_node		*next;
 }	t_node;
 
@@ -30,6 +31,8 @@ typedef struct s_stack
 	struct s_node	*head_node;
 	struct s_node	*max_node;
 	struct s_node	*min_node;
+	struct s_node	*pivot1;
+	struct s_node	*pivot2;
 	int				nodes_count;
 }	t_stack;
 
