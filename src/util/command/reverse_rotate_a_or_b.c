@@ -6,7 +6,7 @@
 /*   By: yena <yena@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/13 14:42:10 by yena              #+#    #+#             */
-/*   Updated: 2023/02/14 12:00:32 by yena             ###   ########.fr       */
+/*   Updated: 2023/02/19 15:54:16 by yena             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	reverse_rotate_a_or_b(t_stack *stack, int command)
 
 	if (!stack->head_node || !stack->head_node->next)
 		return ;
-	nodes_count = get_nodes_count(stack);
+	nodes_count = stack->nodes_count;
 	tail_node = get_tail_node(stack->head_node);
 	tail_node->next = stack->head_node;
 	stack->head_node = tail_node;
