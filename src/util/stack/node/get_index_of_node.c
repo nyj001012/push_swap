@@ -1,31 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_a_or_b.c                                      :+:      :+:    :+:   */
+/*   get_index_of_node.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yena <yena@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/13 14:27:41 by yena              #+#    #+#             */
-/*   Updated: 2023/02/20 11:15:48 by yena             ###   ########.fr       */
+/*   Created: 2023/02/20 11:21:24 by yena              #+#    #+#             */
+/*   Updated: 2023/02/20 11:27:47 by yena             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	push_a_or_b(t_stack *stack_from, t_stack *stack_to, int command)
+int	get_index_of_node(t_stack *stack, t_node *compare)
 {
-	t_node	*temp;
+	t_node	*node;
+	int		index;
 
-	if (!stack_from->nodes_count)
-		return ;
-	temp = stack_from->head_node;
-	stack_from->head_node = stack_from->head_node->next;
-	temp->next = NULL;
-	add_head_node(&stack_to->head_node, temp);
-	stack_from->nodes_count--;
-	stack_to->nodes_count++;
-	if (command == PA)
-		ft_printf("pa\n");
-	else if (command == PB)
-		ft_printf("pb\n");
+	index = 0;
+	if (!compare)
+		return (-1);
+	node = stack->head_node;
+	while (index < stack->nodes_count)
+	{
+		if (node->value == compare->value)
+			return (index);
+		node = node->next;
+		index++;
+	}
+	return (-1);
+}
+
+int	get_index_of_max_node(t_stack *stack)
+{
+	return (get_index_of_node(stack, stack->max_node));
 }

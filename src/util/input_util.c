@@ -6,7 +6,7 @@
 /*   By: yena <yena@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/14 14:46:33 by yena              #+#    #+#             */
-/*   Updated: 2023/02/14 15:08:36 by yena             ###   ########.fr       */
+/*   Updated: 2023/02/20 11:41:44 by yena             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,8 @@ char	**make_input_lists(char **argv)
 	int		list_index;
 	int		i;
 
-	input_lists = (char **)malloc(sizeof(char *) * (get_input_list_size(argv) + 1));
+	input_lists = (char **)malloc(sizeof(char *)
+			* (get_input_list_size(argv) + 1));
 	list_index = -1;
 	while (*argv)
 	{

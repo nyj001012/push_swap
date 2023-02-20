@@ -6,7 +6,7 @@
 /*   By: yena <yena@studnet.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 11:56:13 by yena              #+#    #+#             */
-/*   Updated: 2023/02/14 17:11:23 by yena             ###   ########.fr       */
+/*   Updated: 2023/02/20 11:42:15 by yena             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 int	main(int argc, char	**argv)
 {
 	char	**input;
-	t_stack a;
-	t_stack b;
+	t_stack	a;
+	t_stack	b;
 
 	(void)b;
 	if (argc == 1)
@@ -31,7 +31,6 @@ int	main(int argc, char	**argv)
 		destroy_stacks(&a, &b);
 		exit(0);
 	}
-	// TODO => do swap
 	push_swap(&a, &b);
 	destroy_stacks(&a, &b);
 	exit(0);

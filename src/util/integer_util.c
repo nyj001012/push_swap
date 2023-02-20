@@ -1,26 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   pointer_util.c                                     :+:      :+:    :+:   */
+/*   integer_util.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yena <yena@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/14 10:21:46 by yena              #+#    #+#             */
-/*   Updated: 2023/02/20 11:41:08 by yena             ###   ########.fr       */
+/*   Created: 2023/02/20 11:19:08 by yena              #+#    #+#             */
+/*   Updated: 2023/02/20 11:24:24 by yena             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
-
-void	free_pointers(char **ptrs)
+int	my_abs(int num)
 {
-	int	i;
-
-	i = 0;
-	while (ptrs[i])
-	{
-		free(ptrs[i]);
-		i++;
-	}
-	free(ptrs);
+	if (num < 0)
+		return (num * -1);
+	return (num);
 }

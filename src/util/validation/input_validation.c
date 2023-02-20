@@ -6,7 +6,7 @@
 /*   By: yena <yena@studnet.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 13:51:33 by yena              #+#    #+#             */
-/*   Updated: 2023/02/14 17:30:03 by yena             ###   ########.fr       */
+/*   Updated: 2023/02/20 11:14:48 by yena             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,8 +66,8 @@ bool	has_overflow_or_underflow(char **input)
 
 bool	has_duplicates(char **input)
 {
-	int 	i;
-	int 	j;
+	int		i;
+	int		j;
 	char	*source;
 
 	i = 1;

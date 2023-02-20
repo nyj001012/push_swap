@@ -6,11 +6,11 @@
 /*   By: yena <yena@studnet.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 11:57:22 by yena              #+#    #+#             */
-/*   Updated: 2023/02/06 13:50:53 by yena             ###   ########.fr       */
+/*   Updated: 2023/02/20 11:41:58 by yena             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "push_swap.h"
+#include "push_swap.h"
 
 void	end_with_ok(void)
 {
