@@ -6,7 +6,7 @@
 /*   By: yena <yena@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/12 15:38:05 by yena              #+#    #+#             */
-/*   Updated: 2023/02/20 00:02:45 by yena             ###   ########.fr       */
+/*   Updated: 2023/02/20 18:21:09 by yena             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@ void	set_ascending_order_of_nodes(t_stack *stack)
 	standard = stack->head_node;
 	while (standard)
 	{
-		++standard->asc_order;
 		comparison = stack->head_node;
 		while (comparison)
 		{

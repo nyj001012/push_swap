@@ -6,7 +6,7 @@
 /*   By: yena <yena@studnet.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 11:41:33 by yena              #+#    #+#             */
-/*   Updated: 2023/02/20 11:45:36 by yena             ###   ########.fr       */
+/*   Updated: 2023/02/20 22:06:29 by yena             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -130,6 +130,7 @@ void	rotate_each_stack(t_stack *a, t_stack *b,
 void	count_rotate(t_stack *stack_a, t_stack *stack_b,
 			int *a_rotate, int *b_rotate);
 int		get_rotate_count_in_middle(t_stack *stack, int value_in_stack);
+int		get_rotate_count_with_min_max(t_stack *stack, t_node *compare);
 int		get_rotate_count(t_stack *stack, int value_in_stack);
 bool	do_more_rotate(int *a_rotate, int *b_rotate, int a_count, int b_count);
 

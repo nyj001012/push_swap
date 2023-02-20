@@ -6,7 +6,7 @@
 /*   By: yena <yena@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/20 11:31:24 by yena              #+#    #+#             */
-/*   Updated: 2023/02/20 13:00:45 by yena             ###   ########.fr       */
+/*   Updated: 2023/02/20 21:22:50 by yena             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,36 +19,56 @@ int	get_rotate_count_in_middle(t_stack *stack, int value_in_stack)
 
 	count = 1;
 	compare = stack->head_node;
-	while (compare->next
-		&& (value_in_stack > compare->value
-			&& value_in_stack > compare->next->value))
+	while (compare->next)
 	{
+		if (value_in_stack > compare->value
+		&& value_in_stack < compare->next->value)
+			break ;
 		compare = compare->next;
 		count++;
 	}
+	if (count >= (stack->nodes_count + 1) / 2)
+		count = (stack->nodes_count - count) * -1;
+	return (count);
+}
+
+int	get_rotate_count_with_min_max(t_stack *stack, t_node *compare)
+{
+	int 	count;
+	t_node	*node;
+
+	if (compare == get_max_node(stack))
+		count = 1;
+	else
+		count = 0;
+	node = stack->head_node;
+	while (node->next)
+	{
+		if (node->value == compare->value)
+			break ;
+		node = node->next;
+		count++;
+	}
+	if (count >= (stack->nodes_count + 1) / 2)
+		count = (stack->nodes_count - count) * -1;
 	return (count);
 }
 
 int	get_rotate_count(t_stack *stack, int value_in_stack)
 {
-	t_node	*compare;
+	t_node	*max_node;
 	t_node	*min_node;
 	int		count;
 
-	min_node = stack->min_node;
+	max_node = get_max_node(stack);
+	min_node = get_min_node(stack);
 	if (value_in_stack < min_node->value)
-	{
-		compare = min_node;
-		count = get_index_of_node(stack, compare);
-	}
-	else if (value_in_stack > stack->max_node->value)
-	{
-		compare = stack->max_node;
-		count = get_index_of_node(stack, compare);
-	}
+		count = get_rotate_count_with_min_max(stack, min_node);
+	else if (value_in_stack > max_node->value)
+		count = get_rotate_count_with_min_max(stack, max_node);
 	else
 		count = get_rotate_count_in_middle(stack, value_in_stack);
-	if (count > stack->nodes_count / 2)
+	if (count >= (stack->nodes_count + 1) / 2)
 		count = (stack->nodes_count - count) * -1;
 	return (count);
 }
@@ -78,8 +98,8 @@ void	count_rotate(t_stack *stack_a, t_stack *stack_b,
 	while (i < stack_b->nodes_count)
 	{
 		a_count = get_rotate_count(stack_a, node_b->value);
-		if (i > stack_b->nodes_count / 2)
-			b_count = (stack_b->nodes_count - i + 1) * -1;
+		if (i >= (stack_b->nodes_count + 1) / 2)
+			b_count = (stack_b->nodes_count - i) * -1;
 		else
 			b_count = i;
 		node_b = node_b->next;

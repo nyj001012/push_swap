@@ -6,7 +6,7 @@
 /*   By: yena <yena@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/20 11:28:47 by yena              #+#    #+#             */
-/*   Updated: 2023/02/20 12:07:37 by yena             ###   ########.fr       */
+/*   Updated: 2023/02/20 18:29:53 by yena             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,22 +30,19 @@ void	sort_three_in_chunk(t_stack *a, t_stack *b)
 void	sort_chunks_divided_three(t_stack *a, t_stack *b)
 {
 	int	i;
+	int	nodes_count;
 
 	i = 0;
-	while (i++ < a->nodes_count)
+	nodes_count = a->nodes_count;
+	while (i++ < nodes_count)
 		sort_three_in_chunk(a, b);
 }
 
 void	sort_whole_chunks(t_stack *a)
 {
-	int	index_of_min_node;
 	int	rotate_count;
 
-	index_of_min_node = get_index_of_node(a, a->min_node);
-	if (index_of_min_node > a->nodes_count / 2)
-		rotate_count = (a->nodes_count - index_of_min_node) * -1;
-	else
-		rotate_count = index_of_min_node;
+	rotate_count = get_rotate_count_with_min_max(a, a->min_node);
 	if (rotate_count > 0)
 	{
 		while (rotate_count--)

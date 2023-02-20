@@ -6,7 +6,7 @@
 /*   By: yena <yena@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/20 11:16:16 by yena              #+#    #+#             */
-/*   Updated: 2023/02/20 12:29:29 by yena             ###   ########.fr       */
+/*   Updated: 2023/02/20 22:10:27 by yena             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,15 +41,23 @@ void	put_max_node_to_top(t_stack *stack, int r_command, int rr_command)
 void	rotate_at_same_time(t_stack *a, t_stack *b,
 							int *a_rotate, int *b_rotate)
 {
-	if (*a_rotate && *b_rotate)
+	if (*a_rotate > 0 && *b_rotate > 0)
 	{
-		while (*(a_rotate)-- && *(b_rotate)--)
+		while (*a_rotate && *b_rotate)
+		{
 			rotate_a_and_b(a, b);
+			(*a_rotate)--;
+			(*b_rotate)--;
+		}
 	}
-	else
+	else if (*a_rotate < 0 && *b_rotate < 0)
 	{
-		while (*(a_rotate)++ < 0 && *(b_rotate)++ < 0)
+		while (*a_rotate < 0 && *b_rotate < 0)
+		{
 			reverse_rotate_a_and_b(a, b);
+			(*a_rotate)++;
+			(*b_rotate)++;
+		}
 	}
 }
 
@@ -57,22 +65,34 @@ void	rotate_each_stack(t_stack *a, t_stack *b, int *a_rotate, int *b_rotate)
 {
 	if (*a_rotate > 0)
 	{
-		while (*(a_rotate)--)
+		while (*a_rotate)
+		{
 			rotate_a_or_b(a, RA);
+			(*a_rotate)--;
+		}
 	}
 	else
 	{
-		while (*(a_rotate)++ < 0)
+		while (*a_rotate < 0)
+		{
 			reverse_rotate_a_or_b(a, RRA);
+			(*a_rotate)++;
+		}
 	}
 	if (*b_rotate > 0)
 	{
-		while (*(b_rotate)--)
+		while (*b_rotate)
+		{
 			rotate_a_or_b(b, RB);
+			(*b_rotate)--;
+		}
 	}
 	else
 	{
-		while (*(b_rotate)++ < 0)
+		while (*b_rotate < 0)
+		{
 			reverse_rotate_a_or_b(b, RRB);
+			(*b_rotate)++;
+		}
 	}
 }
