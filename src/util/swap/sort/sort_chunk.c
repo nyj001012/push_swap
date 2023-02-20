@@ -6,7 +6,7 @@
 /*   By: yena <yena@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/20 11:28:47 by yena              #+#    #+#             */
-/*   Updated: 2023/02/20 11:29:37 by yena             ###   ########.fr       */
+/*   Updated: 2023/02/20 12:07:37 by yena             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	sort_three_in_chunk(t_stack *a, t_stack *b)
 {
+	if (is_sorted(a))
+		return ;
 	if (a->head_node->value < a->pivot1->value)
 	{
 		push_a_or_b(a, b, PB);

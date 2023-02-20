@@ -9,11 +9,13 @@ UTILS_NAME = util/pointer_util.c\
 			 util/error_util.c\
 			 util/print_util.c\
 			 util/input_util.c\
+			 util/integer_util.c\
 			 util/validation/input_validation.c\
 			 util/validation/integer_validation.c\
 			 util/stack/clear_stack.c\
 			 util/stack/init_stack.c\
 			 util/stack/is_sorted.c\
+			 util/stack/set_pivots.c\
 			 util/stack/destroy_stacks.c\
 			 util/stack/node/add_head_node.c\
 			 util/stack/node/add_tail_node.c\
@@ -26,6 +28,7 @@ UTILS_NAME = util/pointer_util.c\
 			 util/stack/node/get_max_node.c\
 			 util/stack/node/get_min_node.c\
 			 util/stack/node/get_median_node.c\
+			 util/stack/node/get_index_of_node.c\
 			 util/command/push_a_or_b.c\
 			 util/command/reverse_rotate_a_and_b.c\
 			 util/command/reverse_rotate_a_or_b.c\
@@ -34,9 +37,12 @@ UTILS_NAME = util/pointer_util.c\
 			 util/command/swap_a_and_b.c\
 			 util/command/swap_a_or_b.c\
 			 util/swap/swap_util.c\
+			 util/swap/sort_multiple_counter_util.c\
+			 util/swap/sort_multiple_util.c\
 			 util/swap/sort/sort_two.c\
 			 util/swap/sort/sort_three.c\
-			 util/swap/sort/sort_multiple.c
+			 util/swap/sort/sort_multiple.c\
+			 util/swap/sort/sort_chunk.c
 UTILS = ${addprefix $(SRC_DIR)/, $(UTILS_NAME)}
 UTILS_OBJS = ${UTILS:.c=.o}
 
