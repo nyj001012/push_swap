@@ -6,7 +6,7 @@
 /*   By: yena <yena@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/20 11:16:16 by yena              #+#    #+#             */
-/*   Updated: 2023/02/20 22:10:27 by yena             ###   ########.fr       */
+/*   Updated: 2023/02/21 10:18:00 by yena             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,34 +65,22 @@ void	rotate_each_stack(t_stack *a, t_stack *b, int *a_rotate, int *b_rotate)
 {
 	if (*a_rotate > 0)
 	{
-		while (*a_rotate)
-		{
+		while ((*a_rotate)-- != 0)
 			rotate_a_or_b(a, RA);
-			(*a_rotate)--;
-		}
 	}
 	else
 	{
-		while (*a_rotate < 0)
-		{
+		while ((*a_rotate)++ != 0)
 			reverse_rotate_a_or_b(a, RRA);
-			(*a_rotate)++;
-		}
 	}
 	if (*b_rotate > 0)
 	{
-		while (*b_rotate)
-		{
+		while ((*b_rotate)-- != 0)
 			rotate_a_or_b(b, RB);
-			(*b_rotate)--;
-		}
 	}
 	else
 	{
-		while (*b_rotate < 0)
-		{
+		while ((*b_rotate)++ != 0)
 			reverse_rotate_a_or_b(b, RRB);
-			(*b_rotate)++;
-		}
 	}
 }

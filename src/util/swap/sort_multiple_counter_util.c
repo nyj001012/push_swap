@@ -6,7 +6,7 @@
 /*   By: yena <yena@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/20 11:31:24 by yena              #+#    #+#             */
-/*   Updated: 2023/02/20 21:22:50 by yena             ###   ########.fr       */
+/*   Updated: 2023/02/21 10:09:34 by yena             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	get_rotate_count_in_middle(t_stack *stack, int value_in_stack)
 	while (compare->next)
 	{
 		if (value_in_stack > compare->value
-		&& value_in_stack < compare->next->value)
+			&& value_in_stack < compare->next->value)
 			break ;
 		compare = compare->next;
 		count++;
@@ -34,7 +34,7 @@ int	get_rotate_count_in_middle(t_stack *stack, int value_in_stack)
 
 int	get_rotate_count_with_min_max(t_stack *stack, t_node *compare)
 {
-	int 	count;
+	int		count;
 	t_node	*node;
 
 	if (compare == get_max_node(stack))
