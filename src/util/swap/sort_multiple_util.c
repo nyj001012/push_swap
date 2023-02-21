@@ -89,7 +89,7 @@ void	sort_whole_nodes(t_stack *a)
 {
 	int	rotate_count;
 
-	rotate_count = get_rotate_count_with_min_max(a, a->min_node);
+	rotate_count = get_rotate_count_of_min_max(a, a->min_node);
 	if (rotate_count > 0)
 	{
 		while (rotate_count--)

@@ -6,7 +6,7 @@
 /*   By: yena <yena@studnet.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 11:41:33 by yena              #+#    #+#             */
-/*   Updated: 2023/02/21 11:56:39 by yena             ###   ########.fr       */
+/*   Updated: 2023/02/21 12:12:10 by yena             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -129,8 +129,8 @@ void	sort_whole_nodes(t_stack *a);
 /*------------- SORT_MULTIPLE_COUNTER_UTIL ------------*/
 void	count_rotate(t_stack *stack_a, t_stack *stack_b,
 			int *a_rotate, int *b_rotate);
-int		get_rotate_count_in_middle(t_stack *stack, int value_in_stack);
-int		get_rotate_count_with_min_max(t_stack *stack, t_node *compare);
+int		get_rotate_count_of_middle(t_stack *stack, int value_in_stack);
+int		get_rotate_count_of_min_max(t_stack *stack, t_node *compare);
 int		get_rotate_count(t_stack *stack, int value_in_stack);
 bool	do_more_rotate(int *a_rotate, int *b_rotate, int a_count, int b_count);
 
