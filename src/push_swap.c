@@ -6,7 +6,7 @@
 /*   By: yena <yena@studnet.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 11:56:13 by yena              #+#    #+#             */
-/*   Updated: 2023/02/20 11:42:15 by yena             ###   ########.fr       */
+/*   Updated: 2023/02/21 10:29:00 by yena             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,8 @@ int	main(int argc, char	**argv)
 	t_stack	a;
 	t_stack	b;
 
-	(void)b;
-	if (argc == 1)
-		throw_error();
+	if (argc < 2)
+		exit(0);
 	input = make_input_lists(++argv);
 	if (!input || !is_valid_input(input))
 		throw_error();
