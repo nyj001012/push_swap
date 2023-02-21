@@ -42,7 +42,7 @@ UTILS_NAME = util/pointer_util.c\
 			 util/swap/sort/sort_two.c\
 			 util/swap/sort/sort_three.c\
 			 util/swap/sort/sort_multiple.c\
-			 util/swap/sort/sort_chunk.c
+			 util/swap/sort/sort_depending_on_pivots.c
 UTILS = ${addprefix $(SRC_DIR)/, $(UTILS_NAME)}
 UTILS_OBJS = ${UTILS:.c=.o}
 

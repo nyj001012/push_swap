@@ -6,7 +6,7 @@
 /*   By: yena <yena@studnet.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 11:41:33 by yena              #+#    #+#             */
-/*   Updated: 2023/02/20 22:06:29 by yena             ###   ########.fr       */
+/*   Updated: 2023/02/21 11:56:39 by yena             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -113,10 +113,9 @@ void	sort_two(t_stack *a);
 void	sort_three(t_stack *a);
 void	sort_multiple(t_stack *a, t_stack *b);
 
-/*-------------------- SORT_CHUNK ---------------------*/
-void	sort_three_in_chunk(t_stack *a, t_stack *b);
-void	sort_chunks_divided_three(t_stack *a, t_stack *b);
-void	sort_whole_chunks(t_stack *a);
+/*-------------- SORT_DEPENDING_ON_PIVOTS --------------*/
+void	pb_smaller_than_pivot2(t_stack *a, t_stack *b);
+void	sort_bigger_than_pivots(t_stack *a, t_stack *b);
 
 /*----------------- SORT_MULTIPLE_UTIL ----------------*/
 void	rotate_max_node_to_head(t_stack *a, int command);
@@ -125,6 +124,7 @@ void	rotate_at_same_time(t_stack *a, t_stack *b,
 			int *a_rotate, int *b_rotate);
 void	rotate_each_stack(t_stack *a, t_stack *b,
 			int *a_rotate, int *b_rotate);
+void	sort_whole_nodes(t_stack *a);
 
 /*------------- SORT_MULTIPLE_COUNTER_UTIL ------------*/
 void	count_rotate(t_stack *stack_a, t_stack *stack_b,

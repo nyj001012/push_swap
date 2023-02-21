@@ -6,7 +6,7 @@
 /*   By: yena <yena@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/20 11:16:16 by yena              #+#    #+#             */
-/*   Updated: 2023/02/21 10:18:00 by yena             ###   ########.fr       */
+/*   Updated: 2023/02/21 11:54:02 by yena             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,5 +82,22 @@ void	rotate_each_stack(t_stack *a, t_stack *b, int *a_rotate, int *b_rotate)
 	{
 		while ((*b_rotate)++ != 0)
 			reverse_rotate_a_or_b(b, RRB);
+	}
+}
+
+void	sort_whole_nodes(t_stack *a)
+{
+	int	rotate_count;
+
+	rotate_count = get_rotate_count_with_min_max(a, a->min_node);
+	if (rotate_count > 0)
+	{
+		while (rotate_count--)
+			rotate_a_or_b(a, RA);
+	}
+	else
+	{
+		while (rotate_count++)
+			reverse_rotate_a_or_b(a, RRA);
 	}
 }
