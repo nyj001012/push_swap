@@ -27,7 +27,6 @@ UTILS_NAME = util/pointer_util.c\
 			 util/stack/node/node_iter.c\
 			 util/stack/node/get_max_node.c\
 			 util/stack/node/get_min_node.c\
-			 util/stack/node/get_median_node.c\
 			 util/stack/node/get_index_of_node.c\
 			 util/command/push_a_or_b.c\
 			 util/command/reverse_rotate_a_and_b.c\
